@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { AiOutlineGooglePlus, AiOutlineGithub, AiOutlineTwitter } from 'react-icons/ai'
 import './SignUp.css'
+import Nav from '../Nav/Nav'
 import { useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -53,41 +54,44 @@ function SignUp() {
     }
 
     useEffect(() => {
-      if (localStorage.getItem('auth-token')) {
-        // Redirecting
-        navigate('/');
-      }
-      // eslint-disable-next-line
+        if (localStorage.getItem('auth-token')) {
+            // Redirecting
+            navigate('/');
+        }
+        // eslint-disable-next-line
     }, []);
     return (
-        <main>
-            <div className="SignUp container">
-                <h3>SignUp here 👇</h3>
-                <form onSubmit={submitForm}>
-                    <div>
-                        <label>Email</label>
-                        <input type="email" name="email" value={email} onChange={e => setEmail(e.target.value)} />
+        <>
+            <Nav />
+            <main>
+                <div className="SignUp container">
+                    <h3>SignUp here 👇</h3>
+                    <form onSubmit={submitForm}>
+                        <div>
+                            <label>Email</label>
+                            <input type="email" name="email" value={email} onChange={e => setEmail(e.target.value)} />
+                        </div>
+                        <div>
+                            <label>Username</label>
+                            <input type="text" name="username" value={username} onChange={e => setUserName(e.target.value)} />
+                        </div>
+                        <div>
+                            <label>Password</label>
+                            <input type="password" name="password" value={password} onChange={e => setPassword(e.target.value)} />
+                        </div>
+                        <div>
+                            <button type="submit">{!isLoading ? 'Submit' : <span className="loader"></span>}</button>
+                        </div>
+                    </form>
+                    <div className='links'>
+                        <a href="/">{<AiOutlineGooglePlus />}</a>
+                        <a href="/">{<AiOutlineGithub />}</a>
+                        <a href="/">{<AiOutlineTwitter />}</a>
                     </div>
-                    <div>
-                        <label>Username</label>
-                        <input type="text" name="username" value={username} onChange={e => setUserName(e.target.value)} />
-                    </div>
-                    <div>
-                        <label>Password</label>
-                        <input type="password" name="password" value={password} onChange={e => setPassword(e.target.value)} />
-                    </div>
-                    <div>
-                        <button type="submit">{!isLoading?'Submit': <span className="loader"></span>}</button>
-                    </div>
-                </form>
-                <div className='links'>
-                    <a href="/">{<AiOutlineGooglePlus />}</a>
-                    <a href="/">{<AiOutlineGithub />}</a>
-                    <a href="/">{<AiOutlineTwitter />}</a>
                 </div>
-            </div>
-            <ToastContainer toastStyle={{ backgroundColor: "#202d40", color: 'white' }} />
-        </main>
+                <ToastContainer toastStyle={{ backgroundColor: "#202d40", color: 'white' }} />
+            </main>
+        </>
     )
 }
 

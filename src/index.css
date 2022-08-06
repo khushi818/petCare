@@ -137,15 +137,14 @@ p {
 /*  global classes */
 
 /* section */
-.section {
-    width: 90vw;
+section {
+    width: 100%;
     margin: 0 auto;
-    max-width: var(--max-width);
 }
 
 @media screen and (min-width: 992px) {
-    .section {
-        width: 95vw;
+    section {
+        width: 100%;
     }
 }
 
@@ -154,6 +153,18 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+label {
+    display: block;
+    color: var(--clr-grey-1);
+}
+
+input {
+    margin: 0.2rem;
+    padding: 0.4rem 0.1rem;
+    width: 25vw;
+    border-radius: 5px;
 }
 
 .container {
@@ -215,4 +226,35 @@ main {
 button:hover {
     background: transparent;
     color: var(--clr-white);
+}
+
+
+.loader {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: block;
+    margin: 3px auto;
+    position: relative;
+    background: #FFF;
+    box-shadow: -24px 0 #FFF, 24px 0 #FFF;
+    box-sizing: border-box;
+    animation: shadowPulse 1s linear infinite;
+}
+
+@keyframes shadowPulse {
+    33% {
+        background: #FFF;
+        box-shadow: -24px 0 #78debf, 24px 0 #FFF;
+    }
+
+    66% {
+        background: #78debf;
+        box-shadow: -24px 0 #FFF, 24px 0 #FFF;
+    }
+
+    100% {
+        background: #FFF;
+        box-shadow: -24px 0 #FFF, 24px 0 #78debf;
+    }
 }

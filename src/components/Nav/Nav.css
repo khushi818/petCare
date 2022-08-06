@@ -1,0 +1,26 @@
+section {
+    background: var(--clr-primary-4);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8vw;
+    font-weight: 700;
+}
+
+ul li {
+    color: Black;
+    margin: 0.7rem 8rem;
+}
+
+li:hover {
+    background: rgba(23, 22, 22, 0.1);
+    padding: 0.5rem;
+    transition: 0.5s all ease;
+}
