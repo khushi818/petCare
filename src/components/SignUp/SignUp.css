@@ -45,3 +45,31 @@ a:hover {
     color: var(--clr-white);
 
 }
+
+.loader {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: block;
+    margin:3px auto;
+    position: relative;
+    background: #FFF;
+    box-shadow: -24px 0 #FFF, 24px 0 #FFF;
+    box-sizing: border-box;
+    animation: shadowPulse 1s linear infinite;
+  }
+  
+  @keyframes shadowPulse {
+    33% {
+      background: #FFF;
+      box-shadow: -24px 0 #78debf, 24px 0 #FFF;
+    }
+    66% {
+      background: #78debf;
+      box-shadow: -24px 0 #FFF, 24px 0 #FFF;
+    }
+    100% {
+      background: #FFF;
+      box-shadow: -24px 0 #FFF, 24px 0 #78debf;
+    }
+  }
