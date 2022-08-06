@@ -1,11 +1,18 @@
 import './index.css';
+import Login from './components/Login/Login'
+import SignUp from './components/SignUp/SignUp'
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 
 function App() {
+
   return (
+    <Router>
     <div className="App">
-     <h1> my app</h1>
+      <Routes>
+      <Route path = "/login" element = {<Login/>}/>
+      </Routes>
     </div>
-   
+    </Router>
   );
 }
 
