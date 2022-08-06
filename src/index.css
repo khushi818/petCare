@@ -102,8 +102,7 @@ h4 {
 }
 
 p {
-    margin-bottom: 1.25rem;
-    color: var(--clr-grey-5);
+    color: var(--clr-white);
 }
 
 @media screen and (min-width: 800px) {
@@ -211,4 +210,9 @@ main {
     border-radius: var(--radius);
     outline: 1px solid rgba(12, 52, 18, 0.8);
     cursor: pointer;
+}
+
+button:hover {
+    background: transparent;
+    color: var(--clr-white);
 }

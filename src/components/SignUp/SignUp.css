@@ -19,3 +19,29 @@ input {
     width: 25vw;
     border-radius: 5px;
 }
+
+.links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: max-content;
+    padding: 1rem;
+    gap: 10px;
+    width: 100%;
+    font-size: 20px;
+}
+
+.links a {
+    color: var(--clr-grey-7);
+    background: var(--clr-primary-3);
+    border-radius: 100%;
+    text-align: center;
+    width: 50px;
+    padding: 0.6rem;
+}
+
+a:hover {
+    background: transparent;
+    color: var(--clr-white);
+
+}

@@ -1,4 +1,5 @@
 import react, { useState } from 'react'
+import { AiOutlineGooglePlus, AiOutlineGithub, AiOutlineTwitter } from 'react-icons/ai'
 import './SignUp.css'
 
 function SignUp() {
@@ -7,7 +8,7 @@ function SignUp() {
     return (
         <main>
             <div className="SignUp container">
-                <h3>Login here 👇</h3>
+                <h3>SignUp here 👇</h3>
                 <form>
                     <div>
                         <label>Email</label>
@@ -25,6 +26,11 @@ function SignUp() {
                         <button type="submit">Submit</button>
                     </div>
                 </form>
+                <div className='links'>
+                    <a href="#">{<AiOutlineGooglePlus />}</a>
+                    <a href="#">{<AiOutlineGithub />}</a>
+                    <a href="#">{<AiOutlineTwitter />}</a>
+                </div>
             </div>
         </main>
     )
