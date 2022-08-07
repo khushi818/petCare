@@ -1,7 +1,14 @@
 import './NavHome.css'
 import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
+
 const NavHome = ({ islogin }) => {
-    console.log(islogin)
+    const navigate = useNavigate();
+    const logout = () => {
+        localStorage.removeItem('auth-token');
+        navigate('/login');
+    }
+    // console.log(islogin);
     return (
         <nav className="nav">
             <ul>
@@ -13,7 +20,7 @@ const NavHome = ({ islogin }) => {
                 </Link>
             </ul>
 
-            {islogin ? <button>logout</button> : undefined}
+            {islogin ? <button onClick={logout}>logout</button> : undefined}
 
         </nav>
     )
