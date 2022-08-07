@@ -3,7 +3,7 @@ import './Nav.css';
 
 const Nav = () => {
     return (
-        <section>
+        <nav className='nav'>
             <ul>
                 <Link to="/signUp">
                     <li>SignUp</li>
@@ -12,7 +12,7 @@ const Nav = () => {
                     <li>Login</li>
                 </Link>
             </ul>
-        </section>
+        </nav>
     )
 }
 

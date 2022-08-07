@@ -1,9 +1,10 @@
 .nav {
-    background: var(--clr-primary-4);
+    background: var(--clr-primary-9);
     display: flex;
     justify-content: space-around;
     align-items: center;
     width: 100%;
+    color: var(--clr-white);
 }
 
 ul {
@@ -15,7 +16,7 @@ ul {
 }
 
 ul li {
-    color: Black;
+    color: var(--clr-white);
     margin: 0.7rem 8rem;
 }
 

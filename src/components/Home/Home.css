@@ -1,0 +1,38 @@
+article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1px;
+    background: var(--clr-primary-7);
+    width: 70%;
+    margin: 15px auto;
+    padding: 1rem;
+}
+
+.post {
+    margin-bottom: 5px;
+    max-width: 80%;
+    line-height: 1.5;
+}
+
+.title {
+    display: flex;
+    color: var(--clr-primary-7);
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title a {
+    font-size: 30px;
+}
+
+.username {
+    padding: 1.2rem;
+
+}
+
+.postText {
+    overflow-y: auto;
+    height: 100px;
+}

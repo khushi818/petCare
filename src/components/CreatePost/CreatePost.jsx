@@ -41,7 +41,7 @@ const CreatePost = () => {
     }
     return (
         <main>
-            <div className='container post'>
+            <div className='container create-post'>
                 <h3>Create a Post</h3>
                 <div className="input_value">
                     <label>Title:</label>

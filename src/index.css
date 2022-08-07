@@ -136,14 +136,14 @@ p {
 
 /*  global classes */
 
-/* section */
-section {
+/* nav */
+.nav {
     width: 100%;
     margin: 0 auto;
 }
 
 @media screen and (min-width: 992px) {
-    section {
+    .nav {
         width: 100%;
     }
 }
@@ -217,6 +217,20 @@ input {
     text-transform: capitalize;
     font-size: 1.2rem;
     padding: 0.5rem 0;
+    letter-spacing: var(--spacing);
+    border-radius: var(--radius);
+    outline: 1px solid rgba(12, 52, 18, 0.8);
+    cursor: pointer;
+}
+
+button {
+    color: var(--clr-primary-9);
+    display: block;
+    border-color: transparent;
+    background: var(--clr-primary-3);
+    text-transform: capitalize;
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
     letter-spacing: var(--spacing);
     border-radius: var(--radius);
     outline: 1px solid rgba(12, 52, 18, 0.8);
