@@ -2,8 +2,10 @@ import React, { useState } from 'react'
 import './CreatePost.css'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import NavHome from '../Nav_home/NavHome';
 
 const CreatePost = () => {
+    const [islogin, SetIsLogin] = useState(true);
     const [title, setTitle] = useState("");
     const [postText, setPostText] = useState("");
 
@@ -40,28 +42,31 @@ const CreatePost = () => {
         }
     }
     return (
-        <main>
-            <div className='container create-post'>
-                <h3>Create a Post</h3>
-                <div className="input_value">
-                    <label>Title:</label>
-                    <input
-                        value={title}
-                        placeholder='Title...'
-                        onChange={e => setTitle(e.target.value)} />
+        <>
+            <NavHome islogin={islogin} />
+            <section>
+                <div className='container create-post'>
+                    <h3>Create a Post</h3>
+                    <div className="input_value">
+                        <label className="title"><h3>Title:</h3></label>
+                        <input
+                            value={title}
+                            placeholder='Title...'
+                            onChange={e => setTitle(e.target.value)} />
+                    </div>
+                    <div className="input_value">
+                        <label className="post"><h3>Post:</h3></label>
+                        <textarea
+                            value={postText}
+                            placeholder='Post...'
+                            onChange={e => setPostText(e.target.value)}
+                        />
+                    </div>
+                    <button onClick={submitPost}>Post</button>
                 </div>
-                <div className="input_value">
-                    <label>Post:</label>
-                    <textarea
-                        value={postText}
-                        placeholder='Post...'
-                        onChange={e => setPostText(e.target.value)}
-                    />
-                </div>
-                <button onClick={submitPost}>Post</button>
-            </div>
+            </section>
             <ToastContainer toastStyle={{ backgroundColor: "#202d40", color: 'white' }} />
-        </main>
+        </>
     )
 }
 

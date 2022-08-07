@@ -1,3 +1,32 @@
+textarea {
+    width: 100%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    resize: none;
+}
+
+section {
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
 .create-post {
-    max-width: 60%;
+    max-width: 100%;
+    color: var(--clr-primary-3);
+}
+
+h3 {
+    color: var(--clr-grey-9);
+}
+
+input {
+    width: 100%;
 }
