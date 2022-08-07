@@ -10,7 +10,7 @@ const CreatePost = () => {
     const submitPost = async () => {
         const token = localStorage.getItem('auth-token');
 
-        const response = await fetch('http://localhost:5000/api/blog/createblog', {
+        const response = await fetch('https://petcare-backend13.herokuapp.com/api/blog/createblog', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
