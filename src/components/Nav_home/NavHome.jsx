@@ -12,8 +12,8 @@ const NavHome = ({ islogin }) => {
     return (
         <nav className="nav">
             <ul>
-                {islogin ? undefined : <Link to="/signUp"><li>SignUp</li></Link>}
-                {islogin ? undefined : <Link to="/Login"><li>Login</li></Link>}
+                <Link to="/signUp"><li>SignUp</li></Link>
+                <Link to="/Login"><li>Login</li></Link>
                 <Link to="/createpost">
                     <li>CreatePost</li>
                 </Link>

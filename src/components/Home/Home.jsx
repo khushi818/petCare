@@ -23,8 +23,8 @@ const Home = () => {
 
     return (
         <>
-            <NavHome islogin={islogin} />
-            <section>
+            {/*<NavHome islogin={islogin} />
+             <section>
                 <article>
                     {postLists.map((post) => {
                         return (
@@ -42,43 +42,39 @@ const Home = () => {
                         );
                     })}
                 </article>
-            </section>
+            </section> */}
+            <NavHome islogin={islogin} />
+            <article>
+                <div className="post container">
+                    <div>
+                        <div className="title">
+                            <h3>Title</h3>
+                        </div>
+                        <div className="postText">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                            Fuga aspernatur rerum voluptates nam, excepturi numquam dolore cupiditate nesciunt, officiis unde iure neque doloribus amet natus cum maiores atque hic harum ab!
+                            Dignissimos, tempora libero qui consequuntur magnam molestiae quod ut!
+                        </div>
+                        <h4 className='username'>@joy</h4>
+                    </div>
+                </div>
+
+
+                <div className="post container">
+                    <div>
+                        <div className="title">
+                            <h3>Title2</h3>
+                        </div>
+                        <div className="postText">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                            Fuga aspernatur rerum voluptates nam, excepturi numquam dolore cupiditate nesciunt, officiis unde iure neque doloribus amet natus cum maiores atque hic harum ab!
+                            Dignissimos, tempora libero qui consequuntur magnam molestiae quod ut!
+                        </div>
+                        <h4 className="username">@joy</h4>
+                    </div>
+                </div>
+            </article>
         </>
-        // <>
-        //     <NavHome islogin={islogin} />
-        //     <article>
-        //         <div className="post container">
-        //             <div>
-        //                 <div className="title">
-        //                     <h3>Title</h3>
-        //                     <a href="#">{<FcFullTrash />}</a>
-        //                 </div>
-        //                 <div className="postText">
-        //                     Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-        //                     Fuga aspernatur rerum voluptates nam, excepturi numquam dolore cupiditate nesciunt, officiis unde iure neque doloribus amet natus cum maiores atque hic harum ab!
-        //                     Dignissimos, tempora libero qui consequuntur magnam molestiae quod ut!
-        //                 </div>
-        //                 <h4 className='username'>@joy</h4>
-        //             </div>
-        //         </div>
-
-
-        //         <div className="post container">
-        //             <div>
-        //                 <div className="title">
-        //                     <h3>Title2</h3>
-        //                     <a href="#">{<FcFullTrash />}</a>
-        //                 </div>
-        //                 <div className="postText">
-        //                     Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-        //                     Fuga aspernatur rerum voluptates nam, excepturi numquam dolore cupiditate nesciunt, officiis unde iure neque doloribus amet natus cum maiores atque hic harum ab!
-        //                     Dignissimos, tempora libero qui consequuntur magnam molestiae quod ut!
-        //                 </div>
-        //                 <h4 className="username">@joy</h4>
-        //             </div>
-        //         </div>
-        //     </article>
-        // </>
     )
 }
 
